@@ -210,11 +210,11 @@ canvas {
   position: fixed;
   bottom: -38px;
   right: 0;
-  width: 200px;
-  height: 36px;
+  width: 110px;
+  height: 30px;
   line-height: 36px;
   //background: #1eff00;
-
+  font-size: 12px;
 }
 
 .level-required {
@@ -223,7 +223,7 @@ canvas {
   position: fixed;
   bottom: -38px;
   background-color: #212121;
-  padding: 0 16px;
+  padding: 0 12px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   border: 2px solid #a7a7a7;

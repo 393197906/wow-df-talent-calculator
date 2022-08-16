@@ -22,7 +22,7 @@ class Build {
     // 右侧tips
     this.tips = document.createElement('div')
     this.tips.classList.add('tips')
-    this.tips.innerHTML = '提示：左键选择，右键回退'
+    this.tips.innerHTML = '左键选择，右键回退'
     document.body.append(this.tips)
   }
 

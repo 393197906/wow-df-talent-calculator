@@ -2,7 +2,7 @@ import { fileURLToPath } from 'url'
 
 const config = {
   root: 'src',
-  base: '/df-talents/',
+  base: '/wow10/',
   build: {
     outDir: '../dist',
     emptyOutDir: true,

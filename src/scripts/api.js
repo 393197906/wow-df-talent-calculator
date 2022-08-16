@@ -1,5 +1,4 @@
 const server = 'https://projects.yoro.dev/df-talents/api/'
-
 export function request(method, data, auth = false) {
   const body = { method: method }
   if (data) body.body = data
@@ -7,11 +6,14 @@ export function request(method, data, auth = false) {
     body.password = prompt('Enter your password:')
     if (!body.password) return
   }
+  NProgress.start();
   return fetch(server, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(body)
+  }).finally(()=>{
+    NProgress.done();
   })
 }

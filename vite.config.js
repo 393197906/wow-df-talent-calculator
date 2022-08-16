@@ -1,8 +1,8 @@
 import { fileURLToPath } from 'url'
+import {defineConfig} from "vite"
 
-const config = {
+const config = defineConfig({
   root: 'src',
-  base: '/',
   build: {
     outDir: '../dist',
     emptyOutDir: true,
@@ -18,6 +18,6 @@ const config = {
   server: {
     host: true
   }
-}
+})
 
 export default config

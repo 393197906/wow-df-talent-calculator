@@ -19,7 +19,7 @@ export class Menu {
     this.header = document.querySelector('header')
 
     const a = document.createElement('a')
-    a.href = '/df-talents/'
+    a.href = '/'
 
     this.logo = document.createElement('img')
     this.logo.src = logo

@@ -2,7 +2,7 @@ import { fileURLToPath } from 'url'
 
 const config = {
   root: 'src',
-  base: '/wow10/',
+  base: '/',
   build: {
     outDir: '../dist',
     emptyOutDir: true,

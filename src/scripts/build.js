@@ -75,7 +75,7 @@ class Build {
 
   setState() {
     if (!this.class) return
-    let link = `/wow10/${this.class}/${this.classLink}/`
+    let link = `/${this.class}/${this.classLink}/`
     if (this.spec) link += `${this.spec}/${this.specLink}`
     history.replaceState('', '', link)
   }

@@ -24,10 +24,9 @@ const trees = document.querySelector('.trees')
 
 let path = window.location.pathname.split('/')
 setTimeout(setPath, 100)
-
 function setPath() {
-  if (path[2]) menu.setClass(path[2])
-  if (path[4]) menu.setSpec(path[4])
+  if (path[1]) menu.setClass(path[1])
+  if (path[3]) menu.setSpec(path[3])
 }
 
 async function getTrees(cls, spec) {
@@ -77,8 +76,8 @@ async function getTree(buffer = false, spec = currentSpec) {
     bufferTree = tree
     return
   }
-  classTree.setTree(bufferTree, path[3] || '')
-  specTree.setTree(tree, path[5] || '')
+  classTree.setTree(bufferTree, path[2] || '')
+  specTree.setTree(tree, path[4] || '')
   path = []
 
   if (tree.defaultTalents) classTree.setDefaultTalents(tree.defaultTalents)

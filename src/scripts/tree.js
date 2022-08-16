@@ -170,7 +170,7 @@ export class EditorTree extends BaseTree {
       col.forEach(tal => {
         tal.children = tal.children.map(child => {
           const t = tree.talents.filter(c => c.id == child)[0]
-          
+
           return this.talents[t.col][t.row]
         })
       })
@@ -400,6 +400,7 @@ export class CalculatorTree extends BaseTree {
     this.sectionPoints = [0, 0, 0]
     this.build.setClassLink('')
     const p = build.split('-')
+    console.log("p",this);
     let res = ''
     p.forEach((el, i) => {
       if (el == '') {

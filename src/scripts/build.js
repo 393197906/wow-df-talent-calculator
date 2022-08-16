@@ -12,12 +12,18 @@ class Build {
 
     this.wrapper = document.createElement('div')
     this.wrapper.classList.add('level-required')
-    this.wrapper.innerHTML = 'Character level: '
+    this.wrapper.innerHTML = '人物等级: '
     this.levelEl = document.createElement('level')
     this.levelEl.innerHTML = this.level
 
     this.wrapper.appendChild(this.levelEl)
     document.body.append(this.wrapper)
+
+    // 右侧tips
+    this.tips = document.createElement('div')
+    this.tips.classList.add('tips')
+    this.tips.innerHTML = '提示：左键选择，右键回退'
+    document.body.append(this.tips)
   }
 
   setClass(className) {
@@ -61,8 +67,9 @@ class Build {
       this.wrapper.style.bottom = '-38px'
       return
     }
-    if (this.class == 'evoker' && this.level < 59) this.level = 59 
+    if (this.class == 'evoker' && this.level < 59) this.level = 59
     this.wrapper.style.bottom = '0'
+    this.tips.style.bottom = '0'
     this.levelEl.innerHTML = this.level
   }
 
@@ -85,6 +92,7 @@ class Build {
     this.level = 9
 
     this.wrapper.style.bottom = '-38px'
+    this.tips.style.bottom = '-38px'
     this.levelEl.innerHTML = this.level
   }
 }

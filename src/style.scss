@@ -206,6 +206,16 @@ version {
 canvas {
   pointer-events: none;
 }
+.tips{
+  position: fixed;
+  bottom: -38px;
+  right: 0;
+  width: 200px;
+  height: 36px;
+  line-height: 36px;
+  //background: #1eff00;
+
+}
 
 .level-required {
   height: 36px;
@@ -218,7 +228,6 @@ canvas {
   border-top-right-radius: 8px;
   border: 2px solid #a7a7a7;
   border-bottom: none;
-
   transition: bottom 0.5s ease-in-out;
 }
 

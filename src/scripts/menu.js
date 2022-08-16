@@ -23,7 +23,7 @@ export class Menu {
 
     this.logo = document.createElement('img')
     this.logo.src = logo
-    this.logo.alt = 'World of Warcraft: Dragonflight'
+    this.logo.alt = '魔兽世界10.0(巨龙时代)天赋模拟器'
     this.logo.id = 'logo'
     a.appendChild(this.logo)
     this.header.appendChild(a)
@@ -39,7 +39,7 @@ export class Menu {
 
     this.chooseClass = document.createElement('div')
     this.chooseClass.classList.add('choose-text')
-    this.chooseClass.innerHTML = 'Choose a class'
+    this.chooseClass.innerHTML = '选择一个职业'
     wrapper.appendChild(this.chooseClass)
 
     this.classSelector = document.createElement('div')
@@ -49,7 +49,7 @@ export class Menu {
     this.chooseSpec = document.createElement('div')
     this.chooseSpec.classList.add('choose-text')
     this.chooseSpec.style.display = 'none'
-    this.chooseSpec.innerHTML = 'Choose a specialization'
+    this.chooseSpec.innerHTML = '选择一个专精'
     wrapper.appendChild(this.chooseSpec)
 
     this.specSelector = document.createElement('div')

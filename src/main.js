@@ -7,9 +7,9 @@ import { setLanguage, lang } from './scripts/language'
 import { Menu } from './scripts/menu'
 import { request } from './scripts/api'
 
-const menu = new Menu('Talent Calculator', getTrees, true, false)
+const menu = new Menu('魔兽世界10.0(巨龙时代)天赋模拟器', getTrees, true, false)
 setLanguage()
-setVersion()
+// setVersion()
 
 const tooltip = new CalculatorTooltip()
 

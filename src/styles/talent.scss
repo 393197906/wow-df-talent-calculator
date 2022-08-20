@@ -13,7 +13,7 @@
   position: absolute;
   width: var(--cell-size);
   height: var(--cell-size);
-  background-color: #508852;
+  background-color: blue;
   box-sizing: border-box;
   padding: calc(var(--border));
   cursor: pointer;
@@ -62,7 +62,7 @@
 }
 
 .max {
-  background-color: #c0b162;
+  background-color: red;
 }
 
 .disabled, .disabled:hover {

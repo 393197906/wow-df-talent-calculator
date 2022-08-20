@@ -42,9 +42,9 @@ class BaseTalent {
           x2 += (this.size + this.space) / 2
         }
         if (this.rank == this.ranks || (this.type == 'octagon' && this.rank > 0)) {
-          if (child.rank == child.ranks || (child.type == 'octagon' && child.rank > 0)) color = '#bb9a09'
+          if (child.rank == child.ranks || (child.type == 'octagon' && child.rank > 0)) color = 'red'
           else if ((child.row == 4 && child.tree.sectionPoints[0] < 8) || (child.row == 7 && child.tree.sectionPoints[0] + child.tree.sectionPoints[1] < 20) || child.grayout) color = '#a3a2a3'
-          else color = '#2f722e'
+          else color = 'blue'
         }
       }
 
@@ -777,7 +777,12 @@ export class CalculatorTalent extends BaseTalent {
   }
 
   enable(checkParents = false) {
-    if (checkParents && this.parents.length && !this.parents.some(parent => (parent.rank == parent.ranks && parent.type != 'octagon') || (parent.rank > 0 && parent.type == 'octagon'))) return
+    if (
+        checkParents
+        &&
+        this.parents.length
+        &&
+        !this.parents.some(parent => (parent.rank == parent.ranks && parent.type != 'octagon') || (parent.rank > 0 && parent.type == 'octagon'))) return
     if (this.row == 4 && this.tree.pointsSpent < 8) return
     if (this.row == 7 && this.tree.pointsSpent < 20) return
 

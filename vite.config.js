@@ -17,6 +17,9 @@ const config = defineConfig({
   },
   server: {
     host: true
+  },
+  json:{
+    stringify:true
   }
 })
 

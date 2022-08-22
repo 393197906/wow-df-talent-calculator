@@ -11,14 +11,14 @@ export function request(method, data, auth = false) {
 }
 
 async function dispatchFetch(body) {
-    if (body.method === "getTree") {
-        const tag = body.body.spec === 'class' ? "" : "-" + body.body.spec
-        const name = `${body.body.class}${tag}.js`
-        const json = (await import(`../data/${name}`).catch(()=>({}))).default;
-        if (json) {
-            return getMockJsonData(json)
-        }
-    }
+    // if (body.method === "getTree") {
+    //     const tag = body.body.spec === 'class' ? "" : "-" + body.body.spec
+    //     const name = `${body.body.class}${tag}.js`
+    //     const json = (await import(`../data/${name}`).catch(()=>({}))).default;
+    //     if (json) {
+    //         return getMockJsonData(json)
+    //     }
+    // }
     NProgress.start();
     return fetch(server, {
         method: 'POST',

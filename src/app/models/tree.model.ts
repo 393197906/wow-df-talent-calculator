@@ -38,6 +38,7 @@ export class Tree {
     this.color = ''
   }
   set(raw: rawTree) {
+    console.log(raw);
     const tree = raw.tree
     const texts = raw.texts
     this.cols = tree.cols
